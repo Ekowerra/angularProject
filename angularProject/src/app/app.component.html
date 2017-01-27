@@ -1,0 +1,32 @@
+<h1>
+  {{title}}
+</h1>
+<body>
+<ul>
+  <li *ngFor="let person of people">je m'appelle {{person.username}}</li>
+</ul>
+<form [formGroup]="myForm" (ngSubmit)="addContact(myForm.value)">
+        <fieldset>
+          <legend>Add a new user</legend>
+
+          <div>
+            <label for="user-name">Username:</label>
+            <input type="text" formControlName="username">
+          </div>
+
+          <div>
+            <label for="user-password">Password:</label>
+            <input type="text" formControlName="password">
+          </div>
+
+
+          <button type="submit">Add contact</button>
+
+        </fieldset>
+</form>
+
+
+    
+
+
+</body>
